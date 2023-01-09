@@ -1,19 +1,28 @@
 
-// for (let i = 0; i<= 10; i++){
-//     console.log(`Imprimir i ${i}`)
+
+
+
+
+const conteudo = {
+    tag: "p", texto:"Qualquer texto que você queira"}
+
+  for (let chave in conteudo) {
+    console.log(chave, conteudo[chave])
+  }
+    
+//   const conteiner = document.querySelector(".conteiner");
+//   const div = document.createElement("div");
+    
+//   for (let i = 0; i < conteudo.length; i++) {
+//     let {tag,texto} = conteudo[i];
+
+//  const tagCriada = document.createElement(tag);
+//  tagCriada.innerText = texto;
+//  div.appendChild(tagCriada)
+ 
 // }
-
-let pessoas = [{nome:"Fernada"},{nome:"Fabiano"},{nome:"Fabricio"},{nome:"Ada"},{nome:"Fran"},{nome:"Bicudo"},{nome:"Maurina"},{nome:"Alline"},{nome:"jane"}]
-
-
-pessoas.forEach((todasAsPessoas,i,array)=> {
-    let nomes = todasAsPessoas.nome 
-    console.log(nomes,i)
-} )
-
-
-
-
+  
+// conteiner.appendChild(div)
 
 
 
