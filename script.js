@@ -8,7 +8,7 @@ let years = data.getFullYear();
 let monthDay = data.getDate();
 console.log(monthDay);
 
-function diaDoMes() {
+function MesdoAno() {
 
     monthYaersArray =
     ["January", 
@@ -24,18 +24,18 @@ function diaDoMes() {
     "November", 
     "December"]
 
-    if (monthYaer === 0) return monthYaersArray[0];
+    if (monthYaer === 0)  return monthYaersArray[0];
     if (monthYaer === 1)  return monthYaersArray[1];
     if (monthYaer === 2)  return monthYaersArray[2];
     if (monthYaer === 3)  return monthYaersArray[3];
-    if (monthYaer === 4)  return monthYaersArray[4];
-    if (monthYaer === 5)  return monthYaersArray[5];
-    if (monthYaer === 6)  return monthYaersArray[6];
-    if (monthYaer === 7)  return monthYaersArray[7];
-    if (monthYaer === 8)  return monthYaersArray[8];
-    if (monthYaer === 9)  return monthYaersArray[9];
-    if (monthYaer === 10) return monthYaersArray[10];
-    if (monthYaer === 11) return monthYaersArray[11];}
+    if (monthYaer === 4)  return monthDaydiaMes [4];
+    if (monthYaer === 5)  return monthDaydiaMes [5];
+    if (monthYaer === 6)  return monthDaydiaMes [6];
+    if (monthYaer === 7)  return monthDaydiaMes [7];
+    if (monthYaer === 8)  return monthDaydiaMes [8];
+    if (monthYaer === 9)  return monthDaydiaMes [9];
+    if (monthYaer === 10) return monthDaydiaMes [10];
+    if (monthYaer === 11) return monthDaydiaMes [11];}
  
 
 function diaDaSemana() {
@@ -60,7 +60,7 @@ function diaDaSemana() {
 
 function mostrarNatela() {
     let dataFormatada = diaDaSemana();
-    let dataFormatadaDia = diaDoMes()
+    let dataFormatadaDia = MesdoAno()
 
     let resposta = document.querySelector("#res");
     resposta.innerHTML = `${dataFormatada}, ${dataFormatadaDia} ${monthDay}, ${years}  `
