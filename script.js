@@ -2,13 +2,12 @@
 
 
 
+// const conteudo = {
+//     tag: "p", texto:"Qualquer texto que você queira"}
 
-const conteudo = {
-    tag: "p", texto:"Qualquer texto que você queira"}
-
-  for (let chave in conteudo) {
-    console.log(chave, conteudo[chave])
-  }
+//   for (let chave in conteudo) {
+//     console.log(chave, conteudo[chave])
+//   }
     
 //   const conteiner = document.querySelector(".conteiner");
 //   const div = document.createElement("div");
