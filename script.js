@@ -1,30 +1,22 @@
 
-const palavra = "javascript"
-
-const letrasNaOrdem = palavra.split("")
 
 
-const letrasEmbaralhadas = []
+const tech = ["Fabiano","Ada","Fernanda"]
+function embaralharTech(tech){
+const techEmbaralhada = []
+const imprimir = document.querySelector("#p")
 
+while(tech.length){
+    const sorteio = parseInt(Math.random() * tech.length);
+const LetrasOrdem = tech.splice(sorteio,1)[0]
+  techEmbaralhada.push(LetrasOrdem);
 
-while(letrasNaOrdem.length) {
-    const sorteado = parseInt(Math.random() * letrasNaOrdem.length)
-    const letraSecionada = letrasNaOrdem.splice(sorteado, 1)[0]
+imprimir.innerHTML = techEmbaralhada
+   
+}}
+;
 
-    letrasEmbaralhadas.push(letraSecionada)
-
-    console.log(letrasEmbaralhadas.join("F"))
-}
-
-
-
-
-
-
-
-
-
-
+embaralharTech(tech)
 
 
 
