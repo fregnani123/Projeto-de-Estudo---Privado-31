@@ -1,3 +1,36 @@
+function criarHoraDosSegundos(segundos){
+    const data = new Date(segundos * 1000);
+    return data.toLocaleTimeString("pt-BR", {hour12:false,timeZone:"UTC"})
+}
+
+let clock = document.querySelector(".clock");
+let start = document.querySelector(".start");
+let stop = document.querySelector(".stop");
+let reset = document.querySelector(".reset");
+let segundos = 0 
+let timer;
+
+function iniciarRelogio(){
+    timer = setInterval(function() {
+           segundos++;
+           clock.innerHTML = criarHoraDosSegundos(segundos)
+       },1000) 
+   }
+
+start.addEventListener("click", function (event) { 
+    clearInterval(timer)
+    iniciarRelogio()
+
+})
+stop.addEventListener("click", function (event) {
+    clearInterval(timer);
+})
+reset.addEventListener("click", function (event) {
+ clearInterval(timer);
+  clock.innerHTML = '00:00:00';
+  segundos= 0
+})
+
 
 
 
