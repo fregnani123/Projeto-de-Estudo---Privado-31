@@ -1,30 +1,6 @@
 
 
 
-const tech = ["Fabiano","Ada","Fernanda"]
-function embaralharTech(tech){
-const techEmbaralhada = []
-const imprimir = document.querySelector("#p")
-
-while(tech.length){
-    const sorteio = parseInt(Math.random() * tech.length);
-const LetrasOrdem = tech.splice(sorteio,1)[0]
-  techEmbaralhada.push(LetrasOrdem);
-
-imprimir.innerHTML = techEmbaralhada
-   
-}}
-;
-
-embaralharTech(tech)
-
-
-
-
-
-
-
-
 
 
 
