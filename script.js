@@ -18,14 +18,18 @@ function iniciarRelogio(){
    }
 
 start.addEventListener("click", function (event) { 
+    clock.style.color = "black"
     clearInterval(timer)
     iniciarRelogio()
-
+    
 })
 stop.addEventListener("click", function (event) {
+    clock.style.color = "red"
     clearInterval(timer);
+   
 })
 reset.addEventListener("click", function (event) {
+ clock.style.color = "black"
  clearInterval(timer);
   clock.innerHTML = '00:00:00';
   segundos= 0
