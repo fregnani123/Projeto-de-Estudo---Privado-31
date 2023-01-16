@@ -4,9 +4,7 @@ function criarHoraDosSegundos(segundos){
 }
 
 let clock = document.querySelector(".clock");
-let start = document.querySelector(".start");
-let stop = document.querySelector(".stop");
-let reset = document.querySelector(".reset");
+
 let segundos = 0 
 let timer;
 
@@ -17,23 +15,29 @@ function iniciarRelogio(){
        },1000) 
    }
 
-start.addEventListener("click", function (event) { 
-    clock.style.color = "black"
-    clearInterval(timer)
-    iniciarRelogio()
-    
-})
-stop.addEventListener("click", function (event) {
-    clock.style.color = "red"
-    clearInterval(timer);
-   
-})
-reset.addEventListener("click", function (event) {
- clock.style.color = "black"
- clearInterval(timer);
-  clock.innerHTML = '00:00:00';
-  segundos= 0
-})
+  document.addEventListener('click', function (e) {
+    const el= e.target;
+    if(el.classList.contains('reset')){ 
+        clearInterval(timer);
+        clock.innerHTML = '00:00:00';
+        segundos= 0 
+        clock.classList.remove("pausado")
+    }
+
+    if(el.classList.contains('start')){ 
+        clearInterval(timer);
+        iniciarRelogio();
+        clock.classList.remove("pausado")
+    }
+
+    if(el.classList.contains('stop')){ 
+        clearInterval(timer);
+        clock.classList.add("pausado")
+    }
+  })
+
+
+ 
 
 
 
