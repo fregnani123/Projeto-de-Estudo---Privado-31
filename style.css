@@ -2,12 +2,21 @@
   padding: 0;
   margin: 0;
 }
+body{
+  background: rgba(236, 212, 135, 0.801);
+}
+h1{
+  top: 25px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
 
-h1,h4{ 
-font-size: 30px;
+h4{ 
+font-size: 40px;
 text-align: center;
 position: relative;
-top: 200px;
+top: 190px;
 }
 
 .conteiner{
@@ -19,10 +28,13 @@ top: 200px;
   margin: auto;}
 
 button{
-  width: 40px;
+  width: 45px;
   height: 20px;
   position: relative;
-  top: 230px;
+  top: 220px;
+  background:rgba(236, 212, 135, 0.801);
+  color: rgba(0, 0, 0, 0.801);
+  border-radius: 5px;
 }
 
 .pausado{
