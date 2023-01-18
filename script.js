@@ -25,7 +25,6 @@ function criaBotaoApagar(li){
     botaoApagar.setAttribute('title', 'Apagar esta tarefa')
 }
 
-
 function criaLi(){
     const li = document.createElement('li'); 
     return li;
