@@ -1,6 +1,16 @@
 
-let lista = ['t1','t2','t3','t4']
-let listaJSON = JSON.stringify(lista);
-let listaSalva = JSON.parse(listaJSON)
+let tarefas = document.querySelector(".tarefas");
 
-console.log(listaSalva)
+const liTarefas = tarefas.querySelectorAll("li")
+const listaDeTarefas = []
+
+for(lista of liTarefas){
+    let listaTarefa = lista.innerText
+    listaDeTarefas.push(listaTarefa)
+}
+
+const listaJSON = JSON.stringify(listaDeTarefas)
+
+console.log(listaJSON)
+
+localStorage.setItem("lista", listaJSON)
