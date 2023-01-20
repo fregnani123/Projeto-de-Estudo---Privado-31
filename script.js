@@ -1,9 +1,35 @@
 
-let resposta = document.querySelector(".res");
 
-document.addEventListener("click", function(e) {
-   const el = e.target;
- let numeros =  parseInt(el.innerText);
-   resposta.innerHTML += numeros
-  console.log(numeros)
-   })
+
+function criaCalculadora() {
+  return{
+     display: document.querySelector(".display"),
+     btnClear: document.querySelector("btn-clear"),
+
+    clearDisplay() {
+     this.display.value = ""
+    },
+
+    inicia() {
+       this.cliqueBotoes();
+    },
+
+    cliqueBotoes() {
+      document.addEventListener('click',(e) => {
+        el = e.target;
+        if (el.classList.contains("btn-num")){
+         this.btnParaDisplay(el.innerText);
+        }
+        if(el.classList.contains('btn-clear')) {
+          this.clearDisplay();
+        }
+      });
+    },
+    btnParaDisplay(valor){
+      this.display.value += valor;
+    }
+  }
+}
+
+const calculadora = criaCalculadora();
+calculadora.inicia();
