@@ -11,6 +11,8 @@ for(lista of liTarefas){
 
 const listaJSON = JSON.stringify(listaDeTarefas)
 
+listaJSON.replace("Apagar", "")
+
 console.log(listaJSON)
 
 localStorage.setItem("lista", listaJSON)
