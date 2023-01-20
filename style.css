@@ -1,0 +1,23 @@
+*{
+margin: 0;
+padding: 0;
+}
+.contents{
+     display: flex;
+     height: 100vh;
+}
+table{
+    width: 200px;
+    height: 250px;
+    background: rgba(255, 0, 0, 0.37);
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+}
+
+tr{
+    background: rgb(247, 247, 237);
+}
+.tdRes{
+    height: 40px;
+}

@@ -1,18 +1,9 @@
 
-let tarefas = document.querySelector(".tarefas");
+let resposta = document.querySelector(".res");
 
-const liTarefas = tarefas.querySelectorAll("li")
-const listaDeTarefas = []
-
-for(lista of liTarefas){
-    let listaTarefa = lista.innerText
-    listaDeTarefas.push(listaTarefa)
-}
-
-const listaJSON = JSON.stringify(listaDeTarefas)
-
-listaJSON.replace("Apagar", "")
-
-console.log(listaJSON)
-
-localStorage.setItem("lista", listaJSON)
+document.addEventListener("click", function(e) {
+   const el = e.target;
+ let numeros =  parseInt(el.innerText);
+   resposta.innerHTML += numeros
+  console.log(numeros)
+   })
