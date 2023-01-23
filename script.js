@@ -1,22 +1,21 @@
-function Calculadora(){
-this.display = document.querySelector;
 
-this.capturaCliques = () => {
-    document.addEventListener('click', event => {
-        const el = event.target;
-        console.log(el)
-    })
-}
+function Calculadora(){
+    this.display = document.querySelector('.display');
+
+    this.copturaCliques = () => {
+        document.addEventListener('click', e => {
+            const el = e.target;
+            if (el.classList.contains("btn-num")) this.addNumDisplay(el);
+        });
+    };
+
+  this.addNumDisplay = (el) => this.display.value += el.innerText;
 
 this.inicia = () => {
     this.capturaCliques();
 }
 }
 
-
-
-
-
-
 const calculadora = new Calculadora();
 calculadora.inicia();
+
