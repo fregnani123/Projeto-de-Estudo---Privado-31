@@ -12,18 +12,22 @@ const pessoa = [
     { nome: "Isabela", idade: 70 }
   ];
 
+
+  const filtrarPares = pessoa.filter((valor) => { return valor.idade % 2 !== 0}); console.log(filtrarPares)
+
+  const somarIdade = pessoa.reduce((a,b) => a += b.idade, 0)
+
 function criaId(){
 return Math.round(Math.random() * 100)
 }
 
-
-
 const comIds = pessoa.map((obj, indice) => {
-  obj.id = criaId();
-  return obj
+  const newObj = { ...obj };
+  newObj.id = criaId();
+  return newObj
 })
 
-console.log(comIds)
+
 
 
 
