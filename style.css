@@ -44,7 +44,7 @@ header{
     transition:.9s;
  }
 
- .menuMobile .menu {
+ .active .menu {
     overflow: visible;
     width: 100%;
  }
