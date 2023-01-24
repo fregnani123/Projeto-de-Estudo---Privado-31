@@ -1,0 +1,50 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+:root {
+    --cor1:black;
+}
+
+header{
+    background: red;
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo{
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.btn-mobile{
+    display:none;
+}
+@media(max-width:600px){
+  .btn-mobile{
+    display: block;
+  }
+ header{background: green;}
+
+ .menu {
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    background: red;
+ }
+
+ .menuMobile .menu {
+    overflow: visible;
+ }
+
+}

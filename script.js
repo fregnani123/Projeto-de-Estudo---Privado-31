@@ -1,12 +1,26 @@
 
-function Pessoa (nome, sobrenome){
-  this.nome = nome;
-  this.sobrenome = sobrenome;
+
+const btnMobile = document.querySelector(".btn-mobile");
+const menuMobile= document.querySelector(".nav");
+
+btnMobile.addEventListener("click", () => {
+  menuMobile.classList.toggle('menuMobile')
 }
+)
 
-const p1 = new Pessoa('luiz','miranda')
 
-console.log(p1)
+
+
+
+
+// function Pessoa (nome, sobrenome){
+//   this.nome = nome;
+//   this.sobrenome = sobrenome;
+// }
+
+// const p1 = new Pessoa('luiz','miranda')
+
+// console.log(p1)
 
 
 //   const filtrarPares = pessoa.filter((valor) => { return valor.idade % 2 !== 0}); console.log(filtrarPares)
