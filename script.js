@@ -1,9 +1,29 @@
 
-const nomes = ['eduardo', 'Maria','joao', 'maria'];
+const pessoa = [
+    { nome: "João", idade: 25 },
+    { nome: "Maria", idade: 30 },
+    { nome: "Carlos", idade: 35 },
+    { nome: "Ana", idade: 40 },
+    { nome: "Pedro", idade: 45 },
+    { nome: "Julia", idade: 50 },
+    { nome: "Lucas", idade: 55 },
+    { nome: "Bia", idade: 60 },
+    { nome: "Guilherme", idade: 65 },
+    { nome: "Isabela", idade: 70 }
+  ];
+
+function criaId(){
+return Math.round(Math.random() * 100)
+}
 
 
 
+const comIds = pessoa.map((obj, indice) => {
+  obj.id = criaId();
+  return obj
+})
 
+console.log(comIds)
 
 
 
