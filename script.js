@@ -1,31 +1,27 @@
 
-const pessoa = [
-    { nome: "João", idade: 25 },
-    { nome: "Maria", idade: 30 },
-    { nome: "Carlos", idade: 35 },
-    { nome: "Ana", idade: 40 },
-    { nome: "Pedro", idade: 45 },
-    { nome: "Julia", idade: 50 },
-    { nome: "Lucas", idade: 55 },
-    { nome: "Bia", idade: 60 },
-    { nome: "Guilherme", idade: 65 },
-    { nome: "Isabela", idade: 70 }
-  ];
-
-
-  const filtrarPares = pessoa.filter((valor) => { return valor.idade % 2 !== 0}); console.log(filtrarPares)
-
-  const somarIdade = pessoa.reduce((a,b) => a += b.idade, 0)
-
-function criaId(){
-return Math.round(Math.random() * 100)
+function Pessoa (nome, sobrenome){
+  this.nome = nome;
+  this.sobrenome = sobrenome;
 }
 
-const comIds = pessoa.map((obj, indice) => {
-  const newObj = { ...obj };
-  newObj.id = criaId();
-  return newObj
-})
+const p1 = new Pessoa('luiz','miranda')
+
+console.log(p1)
+
+
+//   const filtrarPares = pessoa.filter((valor) => { return valor.idade % 2 !== 0}); console.log(filtrarPares)
+
+//   const somarIdade = pessoa.reduce((a,b) => a += b.idade, 0)
+
+// function criaId(){
+// return Math.round(Math.random() * 100)
+// }
+
+// const comIds = pessoa.map((obj, indice) => {
+//   const newObj = { ...obj };
+//   newObj.id = criaId();
+//   return newObj
+// })
 
 
 
