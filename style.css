@@ -41,10 +41,12 @@ header{
     width: 0;
     overflow: hidden;
     background: red;
+    transition:.9s;
  }
 
  .menuMobile .menu {
     overflow: visible;
+    width: 100%;
  }
 
 }
