@@ -8,13 +8,46 @@ btnMobile.addEventListener("click", (e) => {
   menuMobile.classList.toggle("active")
 })
 
-function Carro(){
-  this.fabricante = "ferrari";
-  this.cor = "vermelho";
-};
 
-var carro = new Carro();
-console.log(carro)
+function Calculadora(){
+ this.display = document.querySelector(".display");
+
+
+this.capturaCliques = () => {
+  document.addEventListener("click", e => { const el = e.target;
+    
+
+  })
+}
+
+ this.inicia = () => {
+   this.capturaCliques();
+ }
+}
+
+const calculadora = new Calculadora();
+calculadora.inicia();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Carro(){
+//   this.fabricante = "ferrari";
+//   this.cor = "vermelho";
+// };
+
+// var carro = new Carro();
+// console.log(carro)
 
 
 
