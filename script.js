@@ -8,7 +8,13 @@ btnMobile.addEventListener("click", (e) => {
   menuMobile.classList.toggle("active")
 })
 
+function Carro(){
+  this.fabricante = "ferrari";
+  this.cor = "vermelho";
+};
 
+var carro = new Carro();
+console.log(carro)
 
 
 
