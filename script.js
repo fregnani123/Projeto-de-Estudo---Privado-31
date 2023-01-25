@@ -1,5 +1,4 @@
 
-
 const btnMobile = document.querySelector(".btn-mobile");
 const menuMobile = document.querySelector(".nav");
 
@@ -16,7 +15,6 @@ function Calculadora(){
 this.capturaCliques = () => {
   document.addEventListener("click", e => { const el = e.target;
     
-
   })
 }
 
