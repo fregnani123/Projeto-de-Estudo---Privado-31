@@ -17,9 +17,27 @@ this.capturaCliques = () => {
     this.clearDisplay();
     if(el.classList.contains("btn-del"))
     this.delNumDisplay();
+    if(el.classList.contains("btn-eq"))
+    this.realizaConta()
   });
+
+this.realizaConta = () => {
+  try {
+    const conta = eval(this.display.value);
+    if(!conta){
+      alert("conta invalida");
+      return;
+    } 
+    this.display.value = conta;
+  } catch(e) {
+    alert("conta invalida");
+    return
+  }
+}
+
 this.delNumDisplay = () => {
   this.display.value = this.display.value.slice(0, -1);
+  this.realizaConta(el)
 }
 
 this.clearDisplay = () => {
