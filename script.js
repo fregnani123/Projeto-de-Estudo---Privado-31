@@ -13,11 +13,24 @@ function Calculadora(){
 this.capturaCliques = () => {
   document.addEventListener("click", e => { const el = e.target;
     if (el.classList.contains("btn-num")) this.addNumDisplay(el);
+    if (el.classList.contains("btn-clear"))
+    this.clearDisplay();
+    if(el.classList.contains("btn-del"))
+    this.delNumDisplay();
   });
+this.delNumDisplay = () => {
+  this.display.value = this.display.value.slice(0, -1);
+}
+
+this.clearDisplay = () => {
+  this.display.value = ""
+}
+
 };
 this.addNumDisplay = (el) => {
  this.display.value += el.innerText;
 };
+
  this.inicia = () => {
    this.capturaCliques();
  }
