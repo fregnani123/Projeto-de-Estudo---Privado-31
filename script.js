@@ -8,194 +8,44 @@ btnMobile.addEventListener("click", (e) => {
 })
 
 
-function tempo (){
-  const time = new Date()
-  return time.toLocaleTimeString("pt-br",{
-    hour12: false
-  })
+const inputTarefa = document.querySelector(".input-tarefa");
+const btnTarefa = document.querySelector(".btn-tarefa")
+const tarefas = document.querySelector(".tarefas");
+
+function criaLi(){
+ const li = document.createElement('li');
+ return li;
 }
 
-function funcaoDoIntervalo(){
-  console.log(tempo())
+function criaBotaoApagar(li){
+  li.innerText += " ";
+const botaoApagar = document.createElement('button');
+botaoApagar.innerText = 'Apagar';
+li.appendChild(botaoApagar);
+};
+
+inputTarefa.addEventListener('keypress', e => {
+  if(e.keyCode === 13){
+    if(!inputTarefa.value) return
+    criaTarefa(inputTarefa.value);
+  }
+});
+
+function limpaInput(){
+  inputTarefa.value = "";
+  inputTarefa.focus();
 }
 
-setInterval(funcaoDoIntervalo,1000)
+function criaTarefa(textoInput){
+ const li = criaLi();
+ li.innerText = textoInput;
+ tarefas.appendChild(li);
+ limpaInput();
+}
 
-
-
-// function Calculadora(){
-//  this.display = document.querySelector(".display");
-
-  
-//  this.inicia = () => {
-//   this.capturaCliques();
-//   this.capturaEnter();
-// }
-
-// this.capturaEnter = () => {
-//   this.display.addEventListener("keypress", e => {
-//     if (e.keyCode === 13) 
-//     this.realizaConta();
-//   })
-// }
-// this.capturaCliques = () => {
-//   document.addEventListener("click", e => { const el = e.target;
-//     if (el.classList.contains("btn-num")) this.addNumDisplay(el);
-//     if (el.classList.contains("btn-clear"))
-//     this.clearDisplay();
-//     if(el.classList.contains("btn-del"))
-//     this.delNumDisplay();
-//     if(el.classList.contains("btn-eq"))
-//     this.realizaConta();
-//     this.funcaoIntervalo(el)
-//   });
-//   this.funcaoIntervalo = (el) => {
-//    console.log(el);
-//   }
-
-
-
-// this.realizaConta = () => {
-//   try {
-//     const conta = eval(this.display.value);
-//     if(!conta){
-//       alert("conta invalida");
-//       return;
-//     } 
-//     this.display.value = conta;
-//   } catch(e) {
-//     alert("conta invalida");
-//     return
-//   }
-// }
-
-// this.delNumDisplay = () => {
-//   this.display.value = this.display.value.slice(0, -1);
- 
-// }
-
-// this.clearDisplay = () => {
-//   this.display.value = ""
-// }
-
-// };
-// this.addNumDisplay = (el) => {
-//  this.display.value += el.innerText;
-//  this.display.focus();
-// };
-
- 
-// }
-
-// const calculadora = new Calculadora();
-// calculadora.inicia();
-
-
-
-
-
-
-
-
-
-
-
-
-// // function Carro(){
-// //   this.fabricante = "ferrari";
-// //   this.cor = "vermelho";
-// // };
-
-// // var carro = new Carro();
-// // console.log(carro)
-
-
-
-
-// // function Pessoa (nome, sobrenome){
-// //   this.nome = nome;
-// //   this.sobrenome = sobrenome;
-// // }
-
-// // const p1 = new Pessoa('luiz','miranda')
-
-// // console.log(p1)
-
-
-// //   const filtrarPares = pessoa.filter((valor) => { return valor.idade % 2 !== 0}); console.log(filtrarPares)
-
-// //   const somarIdade = pessoa.reduce((a,b) => a += b.idade, 0)
-
-// // function criaId(){
-// // return Math.round(Math.random() * 100)
-// // }
-
-// // const comIds = pessoa.map((obj, indice) => {
-// //   const newObj = { ...obj };
-// //   newObj.id = criaId();
-// //   return newObj
-// // })
-
-
-
-
-
-
-
-
-
-// // class Calculadora {
-// //     constructor() {
-// //         this.display = document.querySelector('.display');
-// //         this.inicia = () => {
-// //             this.copturaCliques();
-// //             this.capturaEnter();
-// //         };
-
-// //         this.capturaEnter = () => {
-// //             this.display.addEventListener("keypress", e => {
-// //                 if(e.keyCode === 13) 
-// //                 this.realizaConta();
-// //             })
-// //         };
-// //         this.copturaCliques = () => {
-// //             document.addEventListener('click', e => {
-// //                 const el = e.target;
-// //                 if (el.classList.contains("btn-num"))
-// //                     this.addNumDisplay(el);
-// //                 if (el.classList.contains("btn-clear"))
-// //                     this.clear();
-// //                 if (el.classList.contains("btn-del"))
-// //                     this.del(el);
-// //                 if (el.classList.contains("btn-eq"))
-// //                     this.realizaConta();
-// //             });
-// //         };
-// //         this.realizaConta = () => {
-// //             try {
-// //                 const conta = eval(this.display.value);
-// //                 if (!conta) {
-// //                     alert("conta invalida");
-// //                     return;
-// //                 };
-// //                 this.display.value = conta;
-// //             } catch (res) {
-// //                 alert("conta invalida");
-// //                 return;
-// //             }
-// //         };
-
-// //         this.addNumDisplay = el => {this.display.value += el.innerText; 
-// //         this.display.focus()}
-
-// //         this.clear = () => this.display.value = "";
-// //         this.del = () => this.display.value = this.display.value.slice(0, -1);
-        
-// //     }
-// // }
-
-// // const calculadora = new Calculadora();
-// // calculadora.inicia();
-
+btnTarefa.addEventListener('click', () =>{
+if(!inputTarefa.value)return;
+criaTarefa(inputTarefa.value);
+})
 
 
