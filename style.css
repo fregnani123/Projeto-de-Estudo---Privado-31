@@ -2,6 +2,9 @@
 margin: 0;
 padding: 0;
 }
+.btn-tarefa{
+    box-sizing: border-box;
+}
 
 :root {
     --cor1:black;
@@ -17,6 +20,7 @@ header{
 }
 .logo{
     padding: 10px;
+    display: grid;
 }
 
 .menu{
