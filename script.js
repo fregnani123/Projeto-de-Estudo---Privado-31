@@ -1,14 +1,39 @@
 
 
-function zeroEsquerda(num){
-  return num >= 10 ? num : `0${num}`;
-}
+let pessoas = [
+  {nome: "João", idade: 25, cidade: "São Paulo"},
+  {nome: "Maria", idade: 32, cidade: "Rio de Janeiro"},
+  {nome: "Pedro", idade: 40, cidade: "Belo Horizonte"},
+  {nome: "Ana", idade: 29, cidade: "Curitiba"},
+  {nome: "Lucas", idade: 36, cidade: "Porto Alegre"},
+  {nome: "Julia", idade: 21, cidade: "Brasília"},
+  {nome: "Mateus", idade: 28, cidade: "Salvador"},
+  {nome: "Isabela", idade: 24, cidade: "Fortaleza"},
+  {nome: "Ricardo", idade: 33, cidade: "Goiânia"},
+  {nome: "Vitor", idade: 30, cidade: "Recife"}
+];
 
-const dt = new Date();
-const sec = dt.getSeconds()
-console.log(zeroEsquerda(sec))
+
+let nomes = pessoas.map(obj => {
+  return obj.nome
+});
+
+let nomeString = nomes.join(", ");
+
+const li = document.querySelector(".li");
+li.innerHTML = nomeString
+
+console.log(nomeString)
 
 
+
+
+// let numeros = [3, 6, 9, 12, 15, 16, 17, 19, 21, 22]; 
+
+// const numerosMap = numeros.map(n => {
+//  return n % 3 == 0 ? n : `${n} not`
+// })
+// console.log(numerosMap)
 
 
 // const pessoa = ['fabiano', 'jair', 'pedro'];
