@@ -1,12 +1,12 @@
 
 
+function zeroEsquerda(num){
+  return num >= 10 ? num : `0${num}`;
+}
+
 const dt = new Date();
-const diaSemana = dt.getDay()
-console.log(diaSemana)
-
-const letras = ['a','b','c','d','e','f','g']
-
-console.log(`${letras[diaSemana]}`)
+const sec = dt.getSeconds()
+console.log(zeroEsquerda(sec))
 
 
 
