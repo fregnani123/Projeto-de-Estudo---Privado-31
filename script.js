@@ -5,10 +5,10 @@ const iniciar = document.querySelector(".start");
 const parar = document.querySelector(".stop");
 const zerar = document.querySelector(".clean");
 let segundos = 0;
+let timer;
 
 function iniciarRelogio(){
-    const timer = setInterval(function () {
-        segundos += 1;
+     timer = setInterval(function () {   segundos += 1;
         relogio.innerHTML = criaSegundos(segundos)
     },1000);
 }
@@ -26,6 +26,14 @@ iniciar.addEventListener("click", e => {
     iniciarRelogio()
 });
 
+
+parar.addEventListener("click", e => {
+    clearInterval(timer)
+});
+
+zerar.addEventListener("click", e => {
+    iniciarRelogio()
+});
 
 
 function zeroEsquerda(n){
