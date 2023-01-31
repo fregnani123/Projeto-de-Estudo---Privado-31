@@ -1,5 +1,36 @@
 
 
+const relogio = document.querySelector(".p");
+const iniciar = document.querySelector(".start");
+const parar = document.querySelector(".stop");
+const zerar = document.querySelector(".clean");
+let segundos = 0;
+
+function iniciarRelogio(){
+    const timer = setInterval(function () {
+        segundos += 1;
+        relogio.innerHTML = criaSegundos(segundos)
+    },1000);
+}
+
+function criaSegundos(segundos){
+
+const data = new Date(segundos * 1000);
+return data.toLocaleTimeString("pt-BR",{
+hour12:false,
+timeZone:"UTC"});
+}
+
+
+iniciar.addEventListener("click", e => {
+    iniciarRelogio()
+});
+
+
+
+function zeroEsquerda(n){
+ return n >= 10 ? n : `0${n}`
+}
 
 
 
@@ -153,4 +184,3 @@
 // //  }
 // // }
 // // addTarefasSalvas()
-

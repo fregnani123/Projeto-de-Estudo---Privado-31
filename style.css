@@ -2,8 +2,15 @@
 margin: 0;
 padding: 0;
 }
-.btn-tarefa{
-    box-sizing: border-box;
+.p{
+    font-size: 50px;
+    text-align: center;
+}
+.container{
+text-align: center;}
+
+button{
+    padding: 20px;
 }
 
 :root {
