@@ -1,44 +1,75 @@
+let imprimir = document.querySelector(".p")
 
+let pessoas = ['Amanda','Fernanda','Pedro','Augusto','Fabiano'
+];
 
-const relogio = document.querySelector(".p");
-const iniciar = document.querySelector(".start");
-const parar = document.querySelector(".stop");
-const zerar = document.querySelector(".clean");
-let segundos = 0;
-let timer;
-
-function iniciarRelogio(){
-     timer = setInterval(function () {   segundos += 1;
-        relogio.innerHTML = criaSegundos(segundos)
-    },1000);
+document.addEventListener("click", (e) => {
+    let el = e.target;
+    if (el.classList.contains("start")){
+        let indice = (sorteado(3))
+        imprimir.innerHTML = pessoas[indice]
+     console.log(indice)
+    }
+    if (el.classList.contains("clean")){
+        limparSorteio()
+    }
+})
+ 
+function sorteado(i){
+ return Math.floor(Math.random() * i );
 }
 
-function criaSegundos(segundos){
-
-const data = new Date(segundos * 1000);
-return data.toLocaleTimeString("pt-BR",{
-hour12:false,
-timeZone:"UTC"});
+function limparSorteio(){
+    imprimir.innerHTML = "Nome Sorteado"
 }
 
 
-iniciar.addEventListener("click", e => {
-    iniciarRelogio()
-});
+
+// const relogio = document.querySelector(".p");
+// const iniciar = document.querySelector(".start");
+// const parar = document.querySelector(".stop");
+// const zerar = document.querySelector(".clean");
+// let segundos = 0;
+// let timer;
+
+// function iniciarRelogio(){
+//      timer = setInterval(function () {segundos += 1;
+//         relogio.innerHTML = criaSegundos(segundos)
+//     },1000);
+// }
+
+// function criaSegundos(segundos){
+
+// const data = new Date(segundos * 1000);
+// return data.toLocaleTimeString("pt-BR",{
+// hour12:false,
+// timeZone:"UTC"});
+// }
 
 
-parar.addEventListener("click", e => {
-    clearInterval(timer)
-});
-
-zerar.addEventListener("click", e => {
-    iniciarRelogio()
-});
+// iniciar.addEventListener("click", e => {
+//     iniciarRelogio();
+//     relogio.classList.remove('pausado');
+// });
 
 
-function zeroEsquerda(n){
- return n >= 10 ? n : `0${n}`
-}
+// parar.addEventListener("click", e => {
+//     clearInterval(timer)
+//     relogio.classList.add("pausado")
+// });
+
+
+
+// zerar.addEventListener("click", e => {
+//     clearInterval(timer);
+//     relogio.innerHTML = '00:00:00'
+//     segundos = 0;
+// });
+
+
+// function zeroEsquerda(n){
+//  return n >= 10 ? n : `0${n}`
+// }
 
 
 
