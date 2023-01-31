@@ -1,29 +1,35 @@
 
 
-let pessoas = [
-  {nome: "João", idade: 25, cidade: "São Paulo"},
-  {nome: "Maria", idade: 32, cidade: "Rio de Janeiro"},
-  {nome: "Pedro", idade: 40, cidade: "Belo Horizonte"},
-  {nome: "Ana", idade: 29, cidade: "Curitiba"},
-  {nome: "Lucas", idade: 36, cidade: "Porto Alegre"},
-  {nome: "Julia", idade: 21, cidade: "Brasília"},
-  {nome: "Mateus", idade: 28, cidade: "Salvador"},
-  {nome: "Isabela", idade: 24, cidade: "Fortaleza"},
-  {nome: "Ricardo", idade: 33, cidade: "Goiânia"},
-  {nome: "Vitor", idade: 30, cidade: "Recife"}
-];
 
 
-let nomes = pessoas.map(obj => {
-  return obj.nome
-});
 
-let nomeString = nomes.join(", ");
 
-const li = document.querySelector(".li");
-li.innerHTML = nomeString
 
-console.log(nomeString)
+
+
+
+
+
+// let pessoas = [
+//   {nome: "João", idade: 25, cidade: "São Paulo"},
+//   {nome: "Maria", idade: 32, cidade: "Rio de Janeiro"},
+//   {nome: "Pedro", idade: 40, cidade: "Belo Horizonte"},
+//   {nome: "Ana", idade: 29, cidade: "Curitiba"},
+//   {nome: "Lucas", idade: 36, cidade: "Porto Alegre"},
+//   {nome: "Julia", idade: 21, cidade: "Brasília"},
+//   {nome: "Mateus", idade: 28, cidade: "Salvador"},
+//   {nome: "Isabela", idade: 24, cidade: "Fortaleza"},
+//   {nome: "Ricardo", idade: 33, cidade: "Goiânia"},
+//   {nome: "Vitor", idade: 30, cidade: "Recife"}
+// ];
+
+//  const pessoasIdade = pessoas.reduce((acumulador,valor)=> {
+//   acumulador += valor.idade;
+//   return acumulador
+//  },0);
+
+//  console.log(pessoasIdade)
+
 
 
 
