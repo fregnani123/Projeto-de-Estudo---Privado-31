@@ -1,6 +1,8 @@
 let imprimir = document.querySelector(".p");
 let nomes = document.querySelector(".nomes");
 let inputAdd = document.querySelector(".input");
+let ul = document.querySelector('.ul')
+
 let pessoas = []
 
 document.addEventListener("click", (e) => {   
@@ -9,6 +11,7 @@ document.addEventListener("click", (e) => {
     if (el.classList.contains("start")){
         let indice = (sorteado(pessoas.length))
         imprimir.innerHTML = pessoas[indice]
+        limpaInput()
      console.log(indice)
     }
     if (el.classList.contains("clean")){
@@ -26,12 +29,23 @@ function limparSorteio(){
 
 function addPessoas(){
     if(!inputAdd.value)return 
-   pessoas.push(inputAdd.value)
-   console.log(pessoas)
+   pessoas.push(inputAdd.value);
+   inputAdd.focus()
+   imprimeNomes(inputAdd.value);
+   inputAdd.value = '';
+
 }
 
+function criaLi(){
+    let li = document.createElement('li')
+    return li 
+}
 
-
+function imprimeNomes(nomesArray){
+    let li = criaLi();
+    let imprimir = ul.appendChild(li)
+    imprimir.innerText = nomesArray
+}
 
 
 
