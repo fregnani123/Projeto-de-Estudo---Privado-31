@@ -1,12 +1,14 @@
-let imprimir = document.querySelector(".p")
+let imprimir = document.querySelector(".p");
+let nomes = document.querySelector(".nomes");
+let inputAdd = document.querySelector(".input");
+let pessoas = []
 
-let pessoas = ['Amanda','Fernanda','Pedro','Augusto','Fabiano'
-];
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {   
+
     let el = e.target;
     if (el.classList.contains("start")){
-        let indice = (sorteado(3))
+        let indice = (sorteado(pessoas.length))
         imprimir.innerHTML = pessoas[indice]
      console.log(indice)
     }
@@ -22,6 +24,27 @@ function sorteado(i){
 function limparSorteio(){
     imprimir.innerHTML = "Nome Sorteado"
 }
+
+
+function addPessoas(){
+    if(!inputAdd.value)return 
+   pessoas.push(inputAdd.value)
+   console.log(pessoas)
+}
+
+let pessoasNovas= addPessoas()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
