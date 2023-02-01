@@ -3,7 +3,6 @@ let nomes = document.querySelector(".nomes");
 let inputAdd = document.querySelector(".input");
 let pessoas = []
 
-
 document.addEventListener("click", (e) => {   
 
     let el = e.target;
@@ -25,14 +24,13 @@ function limparSorteio(){
     imprimir.innerHTML = "Nome Sorteado"
 }
 
-
 function addPessoas(){
     if(!inputAdd.value)return 
    pessoas.push(inputAdd.value)
    console.log(pessoas)
 }
 
-let pessoasNovas= addPessoas()
+
 
 
 
