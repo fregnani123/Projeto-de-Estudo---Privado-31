@@ -17,8 +17,20 @@ document.addEventListener("click", (e) => {
     if (el.classList.contains("clean")){
         limparSorteio()
     }
+
 })
  
+inputAdd.addEventListener('keypress', (e) => { 
+    if(e.keyCode === 13){
+        if(!inputAdd.value)return 
+   pessoas.push(inputAdd.value);
+   inputAdd.focus()
+   imprimeNomes(inputAdd.value);
+   inputAdd.value = '';
+
+    }
+})
+
 function sorteado(i){
  return Math.floor(Math.random() * i );
 }

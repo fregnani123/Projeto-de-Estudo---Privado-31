@@ -2,29 +2,60 @@
 margin: 0;
 padding: 0;
 }
+.main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 input:focus{ outline: 0;}
 .ul {
     background: greenyellow;
     width: 250px;
-    height: 300px;
+    height: 350px;
     overflow: auto;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid black;
+}
+.start{
+    background-color: greenyellow;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    
+}
+.clean{
+    background: rgb(252, 221, 82);
+    color: rgb(5, 0, 0);
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
+li {
+    font-size: 20px;
+    color: black;
 }
 .p{ margin-bottom: 10px;
     font-size: 50px;
     text-align: center;
 }
-.pausado{
-    background-color: red;
-}
+
 .container{
 text-align: center;
+background: rgba(255, 0, 0, 0);
+margin-top: 50px;
+width: 400px;
 
 }
 
 button{
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 
 :root {
