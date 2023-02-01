@@ -2,7 +2,15 @@
 margin: 0;
 padding: 0;
 }
-.p{
+input:focus{ outline: 0;}
+.ul {
+    background: greenyellow;
+    width: 250px;
+    height: 300px;
+    overflow: auto;
+    margin: auto;
+}
+.p{ margin-bottom: 10px;
     font-size: 50px;
     text-align: center;
 }
@@ -10,10 +18,13 @@ padding: 0;
     background-color: red;
 }
 .container{
-text-align: center;}
+text-align: center;
+
+}
 
 button{
-    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 :root {
@@ -21,10 +32,10 @@ button{
 }
 
 header{
+    display: none;
     background: red;
     height: 70px;
     box-sizing: border-box;
-    display: flex;
     justify-content:space-between;
     align-items: center;
 }
