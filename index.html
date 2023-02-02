@@ -32,10 +32,17 @@
           <p class="p">Nome Sorteado</p>
           <button class="start">Sortear</button>
           <button class="clean">Limpar nome sorteado</button>
-          <ul class="ul">
+        <div class="containerDiv">
+            <button class="cleanAll" onclick="removeLi()">Remover 
+               todos os nomes</button>
+
+          <ul id="ul">
           </ul>
-          <button onclick="addPessoas()">Adicionar nome</button>
-          <input type="text" class="input">
+
+        </div>
+          <button onclick="addPessoas()">Adicionar nome</button><input type="text" class="input">
+         
+         
         </div>
     </div>
 </body>
