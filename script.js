@@ -1,21 +1,13 @@
 
+function Car(marca,modelo,ano){
+    this.marca=marca;
+    this.modelo=modelo;
+    this.ano=ano;
 
-let segundos = 0
-const h1 = document.querySelector(".h1")
+    this.getInfo = function(){
+    return this.marca + " " + this.modelo + " " + this.ano}
+};
 
+const myCar = new Car("Fusca","Hat","69");
 
-function criarHoraDosSegundos(segundos){
-    const data = new Date(segundos * 1000);
-    return data.toLocaleTimeString("pt-BR", {hour12:false,timeZone:"UTC"})
-}
-
-console.log(criarHoraDosSegundos())
-
-
-
-
-function zeroAesquerda(n){
- return n>=10 ? n : `0${n}`
-}
-
-
+console.log(myCar.getInfo())
