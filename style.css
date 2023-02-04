@@ -1,111 +1,26 @@
-*{
-margin: 0;
-padding: 0;
-}
-.main{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-input:focus{ outline: 0;
-}
-
-.ul {
-    background: greenyellow;
-    overflow: auto;
-    padding: 5px;
-    
-}
-.containerDiv{
-    background: greenyellow;
-    width: 250px;
-    height: 350px;
-    box-sizing: border-box;
-    margin: auto;
-}
-.start{
-    background-color: greenyellow;
-    padding: 10px;
-    border: 1px solid black;
-    font-size: 15px;
-    
-}
-.clean{
-    background: rgb(252, 221, 82);
-    color: rgb(5, 0, 0);
-    padding: 10px;
-    border: 1px solid black;
-    font-size: 15px;
-}
-
-li {
-    font-size: 20px;
-    color: black;
-}
-.p{ margin-bottom: 10px;
-    font-size: 50px;
-    text-align: center;
-}
 
 .container{
-text-align: center;
-background: rgba(255, 0, 0, 0);
-margin-top: 50px;
-width: 400px;
-
-}
-
-button{
-    padding-left: 10px;
-    padding-right: 10px;
-    
-}
-
-:root {
-    --cor1:black;
-}
-
-header{
-    display: none;
-    background: red;
-    height: 70px;
-    box-sizing: border-box;
-    justify-content:space-between;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.logo{
-    padding: 10px;
-    display: grid;
-}
 
-.menu{
+.quadrado{
+    position: relative;
+    background-color: blue;
+    width: 150px;
+    height: 100px;
     display: flex;
-    gap: 10px;
-    list-style: none;
 }
-.btn-mobile{
-    display:none;
+
+h1{
+    margin: auto;
+    color: white;
+    font-size: 70px;
 }
-@media(max-width:600px){
-  .btn-mobile{
-    display: block;
-  }
- header{background: green;}
-
- .menu {
-    position: absolute;
-    display: block;
-    top: 70px;
-    left: 0;
-    width: 0;
-    overflow: hidden;
-    background: red;
-    transition:.9s;
- }
-
- .active .menu {
-    overflow: visible;
-    width: 100%;
- }
-
-}
+    
