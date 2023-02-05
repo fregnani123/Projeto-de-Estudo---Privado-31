@@ -1,13 +1,24 @@
 
-function Car(marca,modelo,ano){
-    this.marca=marca;
-    this.modelo=modelo;
-    this.ano=ano;
+function NovaPagina(){
+   this.divPai = document.querySelector(".container");
+   
+   this.iniciar = () => {
+    let div2 = this.criaDiv()
+    div2.setAttribute("class","novaDiv");
+    this.divPai.appendChild(div2)
+  }
 
-    this.getInfo = function(){
-    return this.marca + " " + this.modelo + " " + this.ano}
-};
+   this.criaDiv = function(){
+     let div = document.createElement("div")
+    return div; 
+   }
 
-const myCar = new Car("Fusca","Hat","69");
 
-console.log(myCar.getInfo())
+  } 
+
+
+let novaPagina = new NovaPagina();
+
+novaPagina.iniciar()
+
+
