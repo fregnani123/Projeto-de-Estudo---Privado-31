@@ -23,6 +23,9 @@ function zerarCronometro(){
   segundos = 0
 }
 
+function parar(){
+  clearTimeout(timer)
+}
 
 
 
