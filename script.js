@@ -1,35 +1,70 @@
 
-function criaSegundos(segundos){
-let data = new Date(segundos * 1000)
-return data.toLocaleTimeString("pt-BR",{
-  hour12:false, timeZone:"UTC"
-})
+let show = document.querySelector(".h1");
+
+function sortear(){
+  return Math.round(Math.random() * 5)
 }
-criaSegundos()
+let cidade = ["Içara","Tubarão","Ararangua","Forquilhinha","Cocal do Sul"]
+
+
+function sortear(){
+ ns = Math.round(Math.random() * 4)
+ show.innerText = cidade[ns];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function criaSegundos(segundos){
+// let data = new Date(segundos * 1000)
+// return data.toLocaleTimeString("pt-BR",{
+//   hour12:false, timeZone:"UTC"
+// })
+// }
+// criaSegundos()
  
-let display = document.querySelector(".h1");
+// let display = document.querySelector(".h1");
 
-let segundos = 0
-let timer;
+// let segundos = 0
+// let timer;
 
-function iniciarCronometro(){
- timer = setInterval(() => {segundos++;
- display.innerHTML = criaSegundos(segundos); display.classList.add("iniciado");
-},1000)
-}
+// function iniciarCronometro(){
+//  timer = setInterval(() => {segundos++;
+//  display.innerHTML = criaSegundos(segundos); display.classList.add("iniciado");
+// },1000)
+// }
 
-function zerarCronometro(){
-  clearInterval(timer)
-  display.innerHTML = "00:00:00";
-  segundos = 0;
-  display.classList.remove("iniciado");
-  display.classList.remove("parar")
-}
+// function zerarCronometro(){
+//   clearInterval(timer)
+//   display.innerHTML = "00:00:00";
+//   segundos = 0;
+//   display.classList.remove("iniciado");
+//   display.classList.remove("parar")
+// }
 
-function parar(){
-  clearTimeout(timer);
-  display.classList.add("parar");
-}
+// function parar(){
+//   clearTimeout(timer);
+//   display.classList.add("parar");
+// }
 
 
 
