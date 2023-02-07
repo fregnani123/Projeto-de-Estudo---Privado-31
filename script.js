@@ -14,17 +14,21 @@ let timer;
 
 function iniciarCronometro(){
  timer = setInterval(() => {segundos++;
- display.innerHTML = criaSegundos(segundos)},1000)
+ display.innerHTML = criaSegundos(segundos); display.classList.add("iniciado");
+},1000)
 }
 
 function zerarCronometro(){
   clearInterval(timer)
-  display.innerHTML = "00:00:00"
-  segundos = 0
+  display.innerHTML = "00:00:00";
+  segundos = 0;
+  display.classList.remove("iniciado");
+  display.classList.remove("parar")
 }
 
 function parar(){
-  clearTimeout(timer)
+  clearTimeout(timer);
+  display.classList.add("parar");
 }
 
 
