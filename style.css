@@ -1,7 +1,7 @@
 :root {
-    --cor1:rgb(255, 255, 255); /*cor linhas menu*/
+    --cor1:rgb(0, 0, 0); /*cor linhas menu*/
     --cor2:rgb(255, 255, 255); /*cor nome menu*/
-    --cor3:rgb(51, 50, 50); /*cor links do menu */
+    --cor3:rgb(0, 0, 0); /*cor links do menu */
 } 
  
 *{
@@ -17,11 +17,16 @@ a {
     text-decoration: none;
     font-family: sans-serif;
 }
-
+li{
+    font-size: px;
+}
 li:hover {
     background: rgb(255, 255, 255);
 }
-
+.espaco{
+    display: none;
+    background-color:  rgb(255, 255, 255);
+}
 #logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -58,7 +63,22 @@ gap: .5rem;
 @media (max-width: 600px){
     btn-mobile {display: block;
 }
+li{
+    font-size: 25px;
+    background-color: white;
 
+}
+li:hover{
+    background: black;
+}
+
+.espaco{
+    background-color:  rgb(255, 255, 255);
+    display: none;}
+    
+.espaco:hover{
+    background-color: white;
+}
 
 #logo{
     width: 95px;
@@ -77,6 +97,7 @@ gap: .5rem;
 }
 
 #menu {
+    
 display: block;
  /*Agora desta parte para baixo vamos dar estilo a folha do menu quando está ativa */
 position: absolute;/*sobrepor todas*/
@@ -101,7 +122,10 @@ overflow-y:hidden ; /*na animação sincroniza os objetos com o visibility*/
 #menu a { 
      padding: 1rem 0;
      margin:0 1rem;
-     border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+#menu a:hover{
+    color: rgb(251, 255, 0);
 }
 
 #btn-mobile { /*estilizando o button */ 
@@ -117,7 +141,6 @@ overflow-y:hidden ; /*na animação sincroniza os objetos com o visibility*/
     top: 0;
     width: 160px;
     height: 110px;
-    background-color: rgb(0, 0, 0);
 }
 #girar{
     background: rgb(3, 0, 0);
