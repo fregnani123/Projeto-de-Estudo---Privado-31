@@ -1,18 +1,16 @@
 
 
-const h1 = document.querySelector(".h1");
-let n = 3 ;
 
-function sorteio(){
-    
-let ns = Math.round(Math.random() * n)
-ns += 1
-h1.innerHTML = ns
+
+function Produto(nome,preco,estoque,marca){
+    this.nome = nome;
+    this.preco = preco;
+    this.marca = marca
+    this.estoque=estoque;
 }
 
 
-
-
+const fogao = 
 
 
 
