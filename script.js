@@ -1,21 +1,16 @@
 
-//geladeira //tv
-const imprimir = document.querySelector(".h1")
 
-function Produtos(nome,preco,marca){
-this.nome = nome;
-this.preco= preco;
-this.marca = marca;
+const h1 = document.querySelector(".h1");
+let n = 3 ;
 
+function sorteio(){
+    
+let ns = Math.round(Math.random() * n)
+ns += 1
+h1.innerHTML = ns
 }
-Produtos.prototype.imprimir = function () {
-    const formattedPrice = this.preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-    imprimir.innerHTML = (`Item: ${this.nome}. <br> Valor: ${formattedPrice} <br> Marca: ${this.marca}.`);
-  };
 
-let newGeladeira = new Produtos("Geladeira", 3000.50, "Eletrolux");
 
-newGeladeira.imprimir()
 
 
 
