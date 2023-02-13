@@ -1,7 +1,21 @@
 
+//geladeira //tv
+const imprimir = document.querySelector(".h1")
 
+function Produtos(nome,preco,marca){
+this.nome = nome;
+this.preco= preco;
+this.marca = marca;
 
+}
+Produtos.prototype.imprimir = function () {
+    const formattedPrice = this.preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    imprimir.innerHTML = (`Item: ${this.nome}. <br> Valor: ${formattedPrice} <br> Marca: ${this.marca}.`);
+  };
 
+let newGeladeira = new Produtos("Geladeira", 3000.50, "Eletrolux");
+
+newGeladeira.imprimir()
 
 
 
