@@ -9,16 +9,15 @@ function Produto(item,preco,marca,estoque){
     this.estoque = estoque;
 }
 
-Produto.prototype.desconto = (desconto) =>{
-      this.preco - desconto
+Produto.prototype.desconto = function (desconto) {
+  this.preco -=  (this.preco  * desconto / 100);
+  this.preco = this.preco.toLocaleString("pr-BR", {style:"currency",currency:"BRL"})
+  h1.innerHTML = `Item: ${this.item} <br> Preço: ${this.preco} <br> Marca: ${this.marca}`
 }
 
+let fogao = new Produto("Fogão", 420.90, "Fischer", 30);
 
-
-let fogao = new Produto("Fogão", 420.90, "Fisher", 30);
-
-fogao.desconto(20)
-
+fogao.desconto(10);
 console.log(fogao)
 
 

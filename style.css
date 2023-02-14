@@ -6,11 +6,20 @@
 .div{
     width: 400px;
     height: 400px;
-    display: flex;
     background: rgb(0, 0, 0);
+    display: flex;
 }
 .h1{
     color: white;
-    margin: auto;
     font-size: 20px;
+    text-align: center;
+    margin: auto;  
+}
+.title{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+.produto{
+margin: auto;
 }
