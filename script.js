@@ -1,18 +1,25 @@
 
+const h1 = document.querySelector(".h1")
 
 
-
-function Produto(nome,preco,estoque,marca){
-    this.nome = nome;
+function Produto(item,preco,marca,estoque){
+    this.item = item;
     this.preco = preco;
     this.marca = marca
-    this.estoque=estoque;
+    this.estoque = estoque;
+}
+
+Produto.prototype.desconto = (desconto) =>{
+      this.preco - desconto
 }
 
 
-const fogao = 
 
+let fogao = new Produto("Fogão", 420.90, "Fisher", 30);
 
+fogao.desconto(20)
+
+console.log(fogao)
 
 
 
