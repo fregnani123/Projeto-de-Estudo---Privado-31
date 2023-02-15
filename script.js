@@ -11,18 +11,24 @@
 
 
 const h1 = document.querySelector(".h1")
-
  
-let pessoas = ["fabiano","fernanda","ada"]
+let pessoas = ["Fabiano","Fernanda","Ada"]
 
 for(let i= 0; i< pessoas.length; i++){
   console.log(pessoas[i])
 }
 
+let n = [1,5,8,38,22,58,7,5,65]
+
+somar = n.reduce((a,b)=>a= a+b,0)
+console.log(somar)  
 
 
+let falar = (pessoa) => {
+  console.log(pessoa,"Oi estou falando")
+}
 
-
+falar("Fabiano")
 
 
 
