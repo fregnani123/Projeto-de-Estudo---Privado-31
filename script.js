@@ -1,39 +1,82 @@
 
 const h1 = document.querySelector(".h1")
-function Produto(item,preco,marca){
-    this.item = item;
-    this.preco = preco;
-    this.marca = marca 
-}
-Produto.prototype.desconto = function (desconto) {
-  this.preco -=  (this.preco  * desconto / 100);
-  this.preco = this.preco.toLocaleString("pr-BR", {style:"currency",currency:"BRL"})
-  h1.innerHTML = `Item: ${this.item} <br> Preço: ${this.preco} <br> Marca: ${this.marca}`
-}
-function Eletrodomesticos (item,preco,marca,cor,estoque) {
-    this.cor = cor
-  Produto.call(this,item, preco, marca);
-Object.defineProperty(this, "estoque", {
-    enumerable: true,
-    configurable:false,
-    get: function(){
-        return estoque
-    },
-    set: function (valor){
-        if (valor ==! "number")return 
-         estoque = valor      
-    }
-})
-}
-Eletrodomesticos.prototype = Object.create(Produto.prototype);
-Eletrodomesticos.prototype.constructor = Eletrodomesticos;
 
 
-let fogao = new Eletrodomesticos("Smart TV 50", 3500.00, "Sansung","Branca" );
-fogao.estoque = 20
 
-fogao.desconto(10);
-console.log(fogao)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const h1 = document.querySelector(".h1")
+// function Produto(item,preco,marca){
+//     this.item = item;
+//     this.preco = preco;
+//     this.marca = marca;
+
+// }
+// Produto.prototype.desconto = function (desconto) {
+//   this.preco -=  (this.preco  * desconto / 100);
+//   this.preco = this.preco.toLocaleString("pr-BR", {style:"currency",currency:"BRL"})
+//   h1.innerHTML = `Item: ${this.item} <br> Preço: ${this.preco} <br> Marca: ${this.marca} <br> Estoque: ${this.estoque}`
+// }
+
+// function Eletrodomesticos (item,preco,marca,cor) {
+//     this.cor = cor
+
+// Produto.call(this,item, preco, marca);
+// Object.defineProperty(this, "estoque", {
+//     enumerable: true,
+//     configurable:false,
+//     get: function(){
+//         return estoque;
+//     },
+//     set: function (valor){
+//         if (typeof valor !== "number" ) {
+//              throw new TypeError("Não é um numero valido!")
+//                 } estoque = valor }
+// })
+// }
+
+// Eletrodomesticos.prototype = Object.create(Produto.prototype);
+// Eletrodomesticos.prototype.constructor = Eletrodomesticos;
+
+
+// let fogao = new Eletrodomesticos("Smart TV 50", 3500.00, "Sansung","Branca");
+// fogao.estoque = 1000
+
+
+// fogao.desconto(10);
+// console.log(fogao)
 
 
 
