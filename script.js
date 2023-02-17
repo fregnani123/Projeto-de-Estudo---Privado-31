@@ -1,6 +1,71 @@
 
+let form = document.querySelector("#form")
+let inputTexto = document.querySelector("#idtexto");
+let inputSenha = document.querySelector("#idpassword");
 
 
+form.addEventListener("submit", (e) => {
+e.preventDefault();
+ limpaForm()
+ if (inputSenha.value === "" && inputTexto === "") return;
+
+}) 
+
+
+function limpaForm(){
+  inputSenha.value = ""
+  inputTexto.value = ""
+}
+
+
+
+
+
+
+
+
+
+
+
+// function validarCPF(cpf) {
+//   cpf = cpf.replace(/[^\d]+/g,'');
+//   if(cpf == '') console.log("cpf invalido");
+//   // Elimina CPFs invalidos conhecidos
+//   if (cpf.length != 11 ||
+//     cpf == "00000000000" ||
+//     cpf == "11111111111" ||
+//     cpf == "22222222222" ||
+//     cpf == "33333333333" ||
+//     cpf == "44444444444" ||
+//     cpf == "55555555555" ||
+//     cpf == "66666666666" ||
+//     cpf == "77777777777" ||
+//     cpf == "88888888888" ||
+//     cpf == "99999999999")
+//         return false;
+//   // Valida 1o digito
+//   add = 0;
+//   for (i=0; i < 9; i ++)
+//         add += parseInt(cpf.charAt(i)) * (10 - i);
+//         rev = 11 - (add % 11);
+//         if (rev == 10 || rev == 11)
+//             rev = 0;
+//         if (rev != parseInt(cpf.charAt(9)))
+//             return false;
+//   // Valida 2o digito
+//   add = 0;
+//   for (i = 0; i < 10; i ++)
+//         add += parseInt(cpf.charAt(i)) * (11 - i);
+//         rev = 11 - (add % 11);
+//         if (rev == 10 || rev == 11)
+//             rev = 0;
+//         if (rev != parseInt(cpf.charAt(10)))
+//             return false;
+//   return true;
+// }
+
+// let novoCpf = validarCPF("")
+// console.log(novoCpf)
 
   //   function validaCPF(cpf){
   //     return cpf.replace(/\D+/g,"")
@@ -10,25 +75,25 @@
   //  console.log(cpfValido)
 
 
-const h1 = document.querySelector(".h1")
+// const h1 = document.querySelector(".h1")
  
-let pessoas = ["Fabiano","Fernanda","Ada"]
+// let pessoas = ["Fabiano","Fernanda","Ada"]
 
-for(let i= 0; i< pessoas.length; i++){
-  console.log(pessoas[i])
-}
+// for(let i= 0; i< pessoas.length; i++){
+//   console.log(pessoas[i])
+// }
 
-let n = [1,5,8,38,22,58,7,5,65]
+// let n = [1,5,8,38,22,58,7,5,65]
 
-somar = n.reduce((a,b)=>a= a+b,0)
-console.log(somar)  
+// somar = n.reduce((a,b)=>a= a+b,0)
+// console.log(somar)  
 
 
-let falar = (pessoa) => {
-  console.log(pessoa,"Oi estou falando")
-}
+// let falar = (pessoa) => {
+//   console.log(pessoa,"Oi estou falando")
+// }
 
-falar("Fabiano")
+// falar("Fabiano")
 
 
 

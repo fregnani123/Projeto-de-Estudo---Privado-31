@@ -2,24 +2,16 @@
     padding: 0;
     margin: 0;
 }
-.div{
+
+main{
+    background-color: aquamarine;
     width: 400px;
-    height: 400px;
-    background: rgb(0, 0, 0);
+    height: 500px;
     display: flex;
-}
-.h1{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin: auto;  
-}
-.title{
-    color: white;
-    text-align: center;
     margin: auto;
 }
-.produto{
-margin: auto;
-margin-top: 90px;
+
+form{
+    margin: auto;
+    text-align: center;
 }

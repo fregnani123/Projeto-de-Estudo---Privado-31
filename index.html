@@ -8,12 +8,26 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="div">
-        <div class="produto">
-        <h1 class="title">Descrição do produto</h1>
-        <h1 class="h1"></h1>
-         <!-- <button onclick="iniciar()">inicio</button></div> -->
-    </div>
+    <main>
+      <form id="form" method="post">
+        <div>
+          <label for="idtexto">Texto:</label>
+          <input type="text" id="idtexto"name="idtexto"></div>
+          <div>
+            <label for="idpassword">Senha:</label>
+          <input type="password" id="idpassword" name="idpassword">
+        </div>
+        <div>
+          <label for="idDate">Data:</label>
+          <input type="date" id="iddata" name="iddata">
+        </div>
+        <div>
+          <!-- <label for="idfile">Arquivo</label>
+          <input type="file" name="idfile" id="idfile">
+        </div> -->
+        <input type="submit" value="enviar formulario" id="">
+      </form>
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>
