@@ -1,10 +1,19 @@
 
+
 let form = document.querySelector("#form")
 let inputTexto = document.querySelector("#idtexto");
 let inputSenha = document.querySelector("#idpassword");
 
 
+form.addEventListener("submit", (e) => {e.preventDefault()
+  naoEnvia()
+alert("email enviado")})
 
+function naoEnvia(){
+  if(!inputSenha.value || !inputTexto.value){
+    alert("insira uma senha valida")
+  }
+}
 
 // function validarCPF(cpf) {
 //   cpf = cpf.replace(/[^\d]+/g,'');
