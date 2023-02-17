@@ -4,27 +4,6 @@ let inputTexto = document.querySelector("#idtexto");
 let inputSenha = document.querySelector("#idpassword");
 
 
-form.addEventListener("submit", (e) => {
-e.preventDefault();
- limpaForm()
- if (inputSenha.value === "" && inputTexto === "") return;
-
-}) 
-
-
-function limpaForm(){
-  inputSenha.value = ""
-  inputTexto.value = ""
-}
-
-
-
-
-
-
-
-
-
 
 
 // function validarCPF(cpf) {
