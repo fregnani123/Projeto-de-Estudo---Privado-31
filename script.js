@@ -1,19 +1,210 @@
 
 
-let form = document.querySelector("#form")
-let inputTexto = document.querySelector("#idtexto");
-let inputSenha = document.querySelector("#idpassword");
 
 
-form.addEventListener("submit", (e) => {e.preventDefault()
-  naoEnvia()
-alert("email enviado")})
 
-function naoEnvia(){
-  if(!inputSenha.value || !inputTexto.value){
-    alert("insira uma senha valida")
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+// let form = document.querySelector("#form");
+// let inputEmail = document.querySelector("#idemail").value;
+// let inputSenha = document.querySelector("#idpassword").value;
+// let spanRequered = document.querySelectorAll("#spanRequered")
+
+
+// form.addEventListener("submit", (e) => {e.preventDefault()
+
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function validarCPF(cpf) {
 //   cpf = cpf.replace(/[^\d]+/g,'');

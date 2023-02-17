@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+body{
+width: 100%;
+height: 100vh;
+}
 
 main{
     background-color: aquamarine;
@@ -9,9 +13,23 @@ main{
     height: 500px;
     display: flex;
     margin: auto;
+    margin-top: 50px;
 }
 
 form{
     margin: auto;
-    text-align: center;
+    text-align: center;  
+}
+
+h1{
+    margin-bottom: 10px;
+}
+input{
+    margin-bottom: 10px;
+    height: 30px;  
+    width: 250px;
+    display: block;
+}
+.spanRequered {
+    color: red;
 }
