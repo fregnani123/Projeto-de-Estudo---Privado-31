@@ -3,7 +3,7 @@
 let juntar = ("063.912.989-71")
 let semjuntar = juntar.replace(/\D+/g, '');
 
-let array = Array.from(semjuntar)
+ let array = Array.from(semjuntar)
 
 let novoArray = array.slice(0, -2)
 
