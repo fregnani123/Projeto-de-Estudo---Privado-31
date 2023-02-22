@@ -24,7 +24,7 @@ ValidaCPF.prototype.isSequencia = function () {
     return sequencia === this.cpfLimpo;
 }
 
-ValidaCPF.prototype.criaDigito = function(cpfParcial){
+ ValidaCPF.prototype.criaDigito = function(cpfParcial){
 let cpfArray = Array.from(cpfParcial);
 
 let regressivo = cpfArray.length + 1;
@@ -37,8 +37,8 @@ const digito = 11 - (total % 11)
 return digito > 9 ? '0' : String(digito);
 }
 
-let inputCPF = document.querySelector("cpf")
-const cpf = new ValidaCPF('063.912.989-71');
+let inputCPF = document.querySelector(".cpf")
+const cpf = new ValidaCPF(inputCPF.value);
 console.log(cpf.valida());
 
 
