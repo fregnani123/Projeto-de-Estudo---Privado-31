@@ -1,4 +1,11 @@
 
+let stringExemplo = "Fabiano é bonito. Fabiano gosta de assistir futebol";
+let novaString = stringExemplo.replace(/Fabiano/g, "Ele");
+
+console.log(novaString)
+
+
+
 
 let juntar = ("063.912.989-71")
 let semjuntar = juntar.replace(/\D+/g, '');
@@ -8,10 +15,6 @@ let semjuntar = juntar.replace(/\D+/g, '');
 let novoArray = array.slice(0, -2)
 
 console.log(novoArray)
-
-
-
-
 
 
 // function ValidaCPF(cpfEnviado){
