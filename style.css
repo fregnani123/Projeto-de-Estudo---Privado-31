@@ -12,4 +12,8 @@ main{
     text-align: center;}
 h1{
     margin: auto;
-}   
+} 
+
+button{
+    width: 30px;
+}

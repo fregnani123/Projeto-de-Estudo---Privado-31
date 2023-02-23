@@ -1,6 +1,23 @@
 
+let volume = document.querySelector(".p");
+const MAX_VOLUME = 10;
 
+function aumentarVolume(e) {
+    let event = e.target;
+    if (event.classList.contains("mais")) {
+        if (volume.innerText.length < MAX_VOLUME) {
+            volume.innerText += "|";
+        }
+    }
+    if (event.classList.contains("menos")) {
+        let volumeText = volume.innerText;
+        if (volumeText.length > 0) {
+            volume.innerText = volumeText.substring(0, volumeText.length - 1);
+        }
+    }
+}
 
+document.addEventListener("click", aumentarVolume);
 
 
 
