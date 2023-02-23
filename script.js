@@ -1,8 +1,8 @@
 
-let stringExemplo = "Fabiano é bonito. Fabiano gosta de assistir futebol";
-let novaString = stringExemplo.replace(/Fabiano/g, "Ele");
+// let stringExemplo = "Fabiano é bonito. Fabiano gosta de assistir futebol";
+// let novaString = stringExemplo.replace(/[aeiou]/g, "*");
 
-console.log(novaString)
+// console.log(novaString)
 
 
 
@@ -12,9 +12,27 @@ let semjuntar = juntar.replace(/\D+/g, '');
 
  let array = Array.from(semjuntar)
 
-let novoArray = array.slice(0, -2)
+let novoArray = array.slice(0, -2);
 
-console.log(novoArray)
+novoArrayNumber = novoArray.map(Number);
+let regressivo = novoArrayNumber.length + 1;
+
+let total = novoArrayNumber.reduce((ac,val)=> {
+    ac += (regressivo * val)
+    regressivo--;
+    return ac
+},0)
+
+function cpf (){
+    const digito = 11 - (total % 11);
+    return digito > 9 ? 0 : digito
+}
+let cpfNovo = cpf()
+console.log(cpfNovo)
+
+console.log(total)
+console.log(novoArrayNumber)
+
 
 
 // function ValidaCPF(cpfEnviado){
