@@ -1,6 +1,6 @@
 
 let volume = document.querySelector(".p");
-const MAX_VOLUME = 10;
+const MAX_VOLUME = 20;
 
 function aumentarVolume(e) {
     let event = e.target;
