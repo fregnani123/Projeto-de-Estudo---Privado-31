@@ -1,23 +1,33 @@
 
-let volume = document.querySelector(".p");
-const MAX_VOLUME = 20;
+let volume = document.querySelector(".h1");
 
-function aumentarVolume(e) {
-    let event = e.target;
-    if (event.classList.contains("mais")) {
-        if (volume.innerText.length < MAX_VOLUME) {
-            volume.innerText += "|";
-        }
+
+class ValidaCPF {
+    constructor (cpfEnviado) {
+ Object.defineProperty(this, "cpfLimpo", {
+    writable: false,
+    enumerable: true,
+    configurable:false,
+    value: cpfEnviado.replace(/\D+/g, '')
+ });
     }
-    if (event.classList.contains("menos")) {
-        let volumeText = volume.innerText;
-        if (volumeText.length > 0) {
-            volume.innerText = volumeText.substring(0, volumeText.length - 1);
-        }
+    
+    eSequencia(){
+        return this.cpfLimpo.charAt(0).repeat(11) === this.cpfLimpo
+    }
+
+    valida(){
+        
+        if(!this.cpfLimpo) return false;
+        if(typeof this.cpfLimpo !== "string") return false;
+        if(this.cpfLimpo.length !== 11) return false;
+        if(this.eSequencia()) return false
+        return "cheguei aqui"
     }
 }
 
-document.addEventListener("click", aumentarVolume);
+const validacpc = new ValidaCPF("063.912.989-71")
+console.log(validacpc.valida());
 
 
 
@@ -45,75 +55,4 @@ document.addEventListener("click", aumentarVolume);
 
 
 
-
-
-
-
-// let stringExemplo = "Fabiano é bonito. Fabiano gosta de assistir futebol";
-// let novaString = stringExemplo.replace(/[aeiou]/g, "*");
-
-// console.log(novaString)
-
-// function ValidaCPF(cpfEnviado){
-//   Object.defineProperty(this, 'cpfLimpo', {
-//     enumerable: true,
-//     get: function (){
-//         return cpfEnviado.replace(/\D+/g, '');
-//     }
-//   })
-// }
-// ValidaCPF.prototype.valida = function(){
-// if(typeof this.cpfLimpo === 'undefined')return false;
-// if(this.cpfLimpo.length !== 11) return false;
-// if (this.isSequencia()) return false;
-// const cpfParcial = this.cpfLimpo.slice(0, -2)
-// const digito1 = this.criaDigito(cpfParcial);
-// const digito2 = this.criaDigito(cpfParcial + digito1);
-
-// const novoCpf = cpfParcial + digito1 + digito2;
-
-// return novoCpf === this.cpfLimpo;
-// }
-
-// ValidaCPF.prototype.isSequencia = function () {
-//     const sequencia =  this.cpfLimpo[0].repeat(this.cpfLimpo.length);
-//     return sequencia === this.cpfLimpo;
-// }
-
-//  ValidaCPF.prototype.criaDigito = function(cpfParcial){
-// let cpfArray = Array.from(cpfParcial);
-
-// let regressivo = cpfArray.length + 1;
-// let total = cpfArray.reduce((ac, val)=>{
-//     ac += (regressivo * Number(val))
-//     regressivo--;
-//     return ac;
-// },0)
-// const digito = 11 - (total % 11)
-// return digito > 9 ? '0' : String(digito);
-// }
-
-// let inputCPF = document.querySelector(".cpf")
-// const cpf = new ValidaCPF(inputCPF.value);
-// console.log(cpf.valida());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // //684393151f44eea088d129fd08a67dee
 
