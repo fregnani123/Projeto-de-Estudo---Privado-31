@@ -1,34 +1,44 @@
 
+const urlPokemon = "https://pokeapi.co/api/v2/pokemon/"
+
+fetch(urlPokemon).then( response => {
+   return response.json()
+}).then( data => {
+   console.log(data.results[0])
+})
+
+// function rand(n) {
+//    n = 3 * 1000;
+//    return parseInt(Math.random() * n)
+// }
 
 
-function rand(n) {
-   n = 3 * 1000;
-   return parseInt(Math.random() * n)
-}
+// function esperaAi (msg, tempo){
+//   return new Promise( (resolve, reject) => {
+//    setTimeout(() => {
+//       if(typeof msg !== "string"){
+//          reject("cat no erro");
+//          return
+//       }
+//       resolve(msg.toLocaleUpperCase() + ` - passei na promese`)
+//       return;
+//    },tempo)
+//   })
+// }
 
-
-function esperaAi (msg, tempo){
-  return new Promise( (resolve, reject) => {
-   setTimeout(() => {
-      if(typeof msg !== "string"){
-         reject("cat no erro");
-         return
-      }
-      resolve(msg.toLocaleUpperCase() + ` - passei na promese`)
-      return;
-   },tempo)
-  })
-}
-
-async function executa(){
-  const fase1 = await esperaAi("fase 1 ", rand());
-  console.log(fase1)
-  const fase2 =  await esperaAi("fase 2 ", rand());
-  console.log(fase2)
-  const fase3 = await esperaAi("fase 3 ", rand());
-  console.log(fase3)
-}
-executa()
+// async function executa(){
+//   try{
+//      const fase1 = await esperaAi("fase 1 ", rand());
+//      console.log(fase1)
+//      const fase2 =  await esperaAi("fase 2 ", rand());
+//      console.log(fase2)
+//      const fase3 = await esperaAi("fase 3 ", rand());
+//      console.log(fase3)
+//   } catch (e){
+//   throw new Error("permitido apenas strings ")
+//   }
+// }
+// executa()
 
 // esperaAi("fase 1 ", rand()).then(fase => {
 //    console.log(fase)
