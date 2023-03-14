@@ -1,6 +1,71 @@
 
 
 
+function rand(n) {
+   n = 3 * 1000;
+   return parseInt(Math.random() * n)
+}
+
+
+function esperaAi (msg, tempo){
+  return new Promise( (resolve, reject) => {
+   setTimeout(() => {
+      if(typeof msg !== "string"){
+         reject("cat no erro");
+         return
+      }
+      resolve(msg.toLocaleUpperCase() + ` - passei na promese`)
+      return;
+   },tempo)
+  })
+}
+
+async function executa(){
+  const fase1 = await esperaAi("fase 1 ", rand());
+  console.log(fase1)
+  const fase2 =  await esperaAi("fase 2 ", rand());
+  console.log(fase2)
+  const fase3 = await esperaAi("fase 3 ", rand());
+  console.log(fase3)
+}
+executa()
+
+// esperaAi("fase 1 ", rand()).then(fase => {
+//    console.log(fase)
+//    return esperaAi("fase 2", rand())
+// }).then(fase => {
+//    console.log(fase)
+//    return esperaAi("fase 3", rand())
+// }).then(fase => {
+//    console.log(fase)
+// })
+
+// class Produto {
+//    constructor(name,price,stock){
+//    this.name = name;
+//    this.price = price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+// Object.defineProperty(this, "stock", {
+//    configurable:true,
+//    enumerable: true, 
+//    get: function () {
+//       return stock;
+//    },
+//    set: function(valor){
+//       if(typeof valor !== 'number'){
+//          console.log("bad value");
+//          return;
+//       }
+//       stock = valor;
+//    }
+// })
+//    }
+// }
+
+// const newProduct = new Produto("Maça",5.55)
+// newProduct.stock = 55
+
+
+// console.log(newProduct)
 
 
 
