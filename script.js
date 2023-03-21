@@ -1,11 +1,47 @@
 
-const urlPokemon = "https://pokeapi.co/api/v2/pokemon/"
+let newArray = ('063.912.989-71');
 
-fetch(urlPokemon).then( response => {
-   return response.json()
-}).then( data => {
-   console.log(data.results[0])
-})
+
+ let novo = newArray.replace(/\D+/g, '');
+  
+let novoNovo = novo.split("")
+
+let novoSemDigito = novoNovo.slice(0,-2)
+console.log(novoSemDigito)
+
+ let rand = function (mim, max) {
+        mim *= 1000;
+        max *=1000;
+        return Math.floor(Math.random() * (max - mim) + mim)
+    }
+    
+    function esperaAi(msg,tempo){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (typeof msg !== 'string'){
+                    reject("cai no erro");
+            return
+                }
+                resolve( msg + ' Passei pela promise')
+                 },tempo)
+        })
+    }
+   let tempos = esperaAi("Fase 1", rand(0,3)).then( valor => {
+    console.log(valor);
+    return esperaAi("Fase 2", rand(0,3) )
+   })
+
+
+
+
+
+// const urlPokemon = "https://pokeapi.co/api/v2/pokemon/"
+
+// fetch(urlPokemon).then( response => {
+//    return response.json()
+// }).then( data => {
+//    console.log(data.results[0])
+// })
 
 // function rand(n) {
 //    n = 3 * 1000;
