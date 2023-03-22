@@ -9,12 +9,7 @@ let novoNovo = novo.split("")
 let novoSemDigito = novoNovo.slice(0,-2)
 console.log(novoSemDigito)
 
- let rand = function (mim, max) {
-        mim *= 1000;
-        max *=1000;
-        return Math.floor(Math.random() * (max - mim) + mim)
-    }
-    
+
     function esperaAi(msg,tempo){
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -26,12 +21,42 @@ console.log(novoSemDigito)
                  },tempo)
         })
     }
-   let tempos = esperaAi("Fase 1", rand(0,3)).then( valor => {
-    console.log(valor);
-    return esperaAi("Fase 2", rand(0,3) )
-   })
 
 
+//let tempos = esperaAi("Fase 1", rand(0,3)).then( valor => {
+//     console.log(valor);
+//     return esperaAi("Fase 2", rand(0,3)).then(
+//      valor => {
+//         console.log(valor);
+//         return esperaAi("Fase 3", rand(0,3)).then(valor => {
+//             console.log(valor)
+//         })
+//      }
+//     )
+//    }).catch(e => console(e));
+
+function rand (mim, max) {
+    mim *= 1000;
+    max *=1000;
+    return Math.floor(Math.random() * (max - mim) + mim)
+}
+
+ async function executa(){
+ try{ 
+const simulandoPromise = await esperaAi("Simulador: ",rand(0,3)); console.log(" Simulando uma tarefa assíncrona")
+    
+const fase1 = await esperaAi("Fase 1", rand(0,3)); console.log(fase1)
+
+ const fase2 = await esperaAi("Fase 2", rand(0,3)); console.log(fase2)
+
+ const fase3 = await esperaAi("Fase 3", rand(0,3));console.log(fase3);
+
+ console.log('Terminamos na fase', fase3);} catch (e) { throw new Error("Erro meu")
+    
+ }
+   }
+
+  executa();
 
 
 
