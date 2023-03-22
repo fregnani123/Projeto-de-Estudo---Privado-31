@@ -1,13 +1,13 @@
 
-let newArray = ('063.912.989-71');
+// let newArray = ('063.912.989-71');
 
 
- let novo = newArray.replace(/\D+/g, '');
+//  let novo = newArray.replace(/\D+/g, '');
   
-let novoNovo = novo.split("")
+// let novoNovo = novo.split("")
 
-let novoSemDigito = novoNovo.slice(0,-2)
-console.log(novoSemDigito)
+// let novoSemDigito = novoNovo.slice(0,-2)
+// console.log(novoSemDigito)
 
 
     function esperaAi(msg,tempo){
@@ -17,7 +17,7 @@ console.log(novoSemDigito)
                     reject("cai no erro");
             return
                 }
-                resolve( msg + ' Passei pela promise')
+                resolve( msg + ' -Passei pela promise')
                  },tempo)
         })
     }
@@ -43,7 +43,7 @@ function rand (mim, max) {
 
  async function executa(){
  try{ 
-const simulandoPromise = await esperaAi("Simulador: ",rand(0,3)); console.log(" Simulando uma tarefa assíncrona")
+const simulandoPromise = await esperaAi("Simulador: Simulando uma tarefa assíncrona",rand(0,3)); console.log(simulandoPromise)
     
 const fase1 = await esperaAi("Fase 1", rand(0,3)); console.log(fase1)
 
