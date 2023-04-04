@@ -1,36 +1,90 @@
 
-  let tempo = 500 
-
-  function numeroAleatorio(){
-    return Math.round(Math.random() * tempo)
-  }
-
-  let time = numeroAleatorio()
-  console.log(time)
-
-
-   function esperaAi(){
-    return new Promise( function(resolve, reject){
-      setTimeout(() => {
-        if(Math.random() < 0.5 ){
-          resolve('Operação assíncrona concluída com sucesso!')
-        }else{
-          reject('Erro ao executar a operação assíncrona.');}
-      }, time);
-    })
+  class ValidaCpf {
+    constructor(cpfEmviado){
+     Object.defineProperty(this, 'cpfLimpo',{
+      writable: false,
+      enumerable:false,
+      configurable:true,
+      value: cpfEmviado.replace(/\D+/g,'')
+     })
+    }
+   eSequencia (){
+   return this.cpfLimpo.charAt(0).repeat(this.cpfLimpo.length) === this.cpfLimpo
    }
-  
-   async function executa(){
-    await esperaAi()
-    console.log("time 1");
-    await esperaAi()
-    console.log("time 2");
-    await esperaAi()
-    console.log("time 3");
-
-   } 
    
-  executa()
+   geraNovoCpf(){
+    let cpfSemDigitos = this.cpfLimpo.slice(0,-2)
+   }
+
+   valida(){
+    if (!this.cpfLimpo)return false;
+    if (this.cpfLimpo.length !== 11) return false;
+    if (this.eSequencia()) return false;
+    return 'cheguei Aqui!'
+     
+   }
+  }
+  
+  let validaCPF = new ValidaCpf('063.912.989-71')
+  
+  console.log(validaCPF)
+  console.log(validaCPF.valida())
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // let tempo = 500 
+
+  // function numeroAleatorio(){
+  //   return Math.round(Math.random() * tempo)
+  // }
+
+  // let time = numeroAleatorio()
+  // console.log(time)
+
+
+  //  function esperaAi(){
+  //   return new Promise( function(resolve, reject){
+  //     setTimeout(() => {
+  //       if(Math.random() < 0.9 ){
+  //         resolve('Operação assíncrona concluída com sucesso!')
+  //       }else{
+  //         reject('Erro ao executar a operação assíncrona.');}
+  //     }, time);
+  //   })
+  //  }
+  
+  //  async function executa(){
+  //   await esperaAi()
+  //   console.log("time 1");
+  //   await esperaAi()
+  //   console.log("time 2");
+  //   await esperaAi()
+  //   console.log("time 3");
+  //  } 
+   
+  // executa()
 
 
 
