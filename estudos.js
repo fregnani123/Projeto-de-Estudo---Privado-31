@@ -1,3 +1,131 @@
+
+  let tempo = 500 
+
+  function numeroAleatorio(){
+    return Math.round(Math.random() * tempo)
+  }
+
+  let time = numeroAleatorio()
+  console.log(time)
+
+
+   function esperaAi(){
+    return new Promise( function(resolve, reject){
+      setTimeout(() => {
+        if(Math.random() < 0.5 ){
+          resolve('Operação assíncrona concluída com sucesso!')
+        }else{
+          reject('Erro ao executar a operação assíncrona.');}
+      }, time);
+    })
+   }
+  
+   async function executa(){
+    await esperaAi()
+    console.log("time 1");
+    await esperaAi()
+    console.log("time 2");
+    await esperaAi()
+    console.log("time 3");
+
+   } 
+   
+  executa()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let tech = ['JS', 'HTML', 'CSS', 'React'];
+
+// tech.sort(function() {
+//   return Math.random() - 0.5;
+// });
+
+// console.log(tech);
+
+
+
+
+
+
+
+
+
+
+
 const cadastros = [{
     "nome": "Miguel",
     "email": "miguel@email.com.br",
@@ -956,13 +1084,21 @@ const cadastros = [{
 //    li.innerHTML = cadastro.cpf 
 // }
 
-const numeros = [1, 22, 3, 14, 5];
+// const numeros = [1, 22, 3, 14, 5];
 
-for (const indice in numeros) {
-  console.log(numeros[indice]);
-}
+// for (const indice in numeros) {
+//   console.log(numeros[indice]);
+// }
 
+// let cpf = ('063.912.989-71')
+// let cpfLimpo = cpf.replace(/\D+/g,'')
 
+// console.log(typeof cpfLimpo)
+
+//    if (typeof cpfLimpo === 'string'){
+//        console.log('Sim é uma string')
+//    }else{console.log('nao é string')}
+ 
 
 
 // let n = [15,55,78,1,5,8,9,44,52,12]; 
