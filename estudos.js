@@ -43,7 +43,7 @@ let digito = 11 - (total % 11 );
    }
   }
   
-  let validaCPF = new ValidaCpf('0663.912.989-71')
+  let validaCPF = new ValidaCpf('063.912.989-71')
  
    if (validaCPF.valida()){
     console.log('CPF válido')
