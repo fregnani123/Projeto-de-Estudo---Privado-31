@@ -1,5 +1,6 @@
 
   class ValidaCpf {
+    
     constructor(cpfEmviado){
      Object.defineProperty(this, 'cpfLimpo',{
       writable: false,
@@ -37,15 +38,16 @@ let digito = 11 - (total % 11 );
     if (this.cpfLimpo.length !== 11) return false;
     if (this.eSequencia()) return false;
     this.geraNovoCpf();
-    console.log('Novo Cpf: ', this.novoCPF )
-    return this.novoCPF === this.cpfLimpo 
+   return this.novoCPF === this.cpfLimpo
+
    }
   }
   
-  let validaCPF = new ValidaCpf('063.912.989-71')
-  
-  console.log(validaCPF)
-  console.log(validaCPF.valida())
+  let validaCPF = new ValidaCpf('0663.912.989-71')
+ 
+   if (validaCPF.valida()){
+    console.log('CPF válido')
+   }else{console.log('CPF invalido')}
 
   
   
